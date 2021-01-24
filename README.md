@@ -1,17 +1,15 @@
 # Chess Algorithms Competition
--------
+
 ## Welcome to JAVA Chess Competition
 
 > It is a program that matches agents that use various algorithms against each other to record and verify which algorithms are more efficient, have a higher winning rate, and what results they have when applying a particular rule.
 
 ## Week 1 (1/24/2021 - 1/30/2021) To-Do List
-------
 1. Learn how to use git (https://git-scm.com/docs/gittutorial).
 2. Create a branch with your name/nickname.
 3. See the structure of the current code. (If you have a question, please let me know, I will add Javadocs ASAP)
 
 ## Technologies
-------
 * JDK 11 or above
 * JavaFX
 * JDBC
@@ -40,7 +38,6 @@
 ```
 
 ## Team
-------
 👤 **Jeonghoon Lee**
 * Email: jeonghoongatech@gmail.com
 * Github: [@jeonghoon6764](https://github.com/jeonghoon6764)
@@ -62,9 +59,7 @@
 * Github: 
 
 ## Communication
-------
 * Discord Server: https://discord.gg/MXReAVdy
 
 ## Meeting time
-------
 * Every Saturday at 10 PM (ET)
