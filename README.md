@@ -10,9 +10,9 @@ Welcome to JAVA Chess Competition
 * Email: jeonghoongatech@gmail.com
 * Github: [@jeonghoon6764](https://github.com/jeonghoon6764)
 
-👤 
-* Email: 
-* Github: 
+👤  **Taehee Park**
+* Email: taehee5525@gmail.com
+* Github: [@taehee5525](https://github.com/taehee5525)
 
 👤 
 * Email: 
