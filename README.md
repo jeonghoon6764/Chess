@@ -18,9 +18,9 @@ Welcome to JAVA Chess Competition
 * Email: hyunheep1202@gmail.com
 * Github: [@jhpark1202](https://github.com/jhpark1202)
 
-👤 
-* Email: 
-* Github: 
+👤 **Hoyeon Kang**
+* Email: zveilsidez@gmail.com
+* Github: [@raykang21](https://github.com/raykang21)
 
 👤 
 * Email: 
