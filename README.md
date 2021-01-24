@@ -14,8 +14,8 @@ Welcome to JAVA Chess Competition
 * Email: taehee5525@gmail.com
 * Github: [@taehee5525](https://github.com/taehee5525)
 
-👤 
-* Email: **Hyun Hee Park**
+👤 **Hyun Hee Park**
+* Email: hyunheep1202@gmail.com
 * Github: [@jhpark1202](https://github.com/jhpark1202)
 
 👤 
