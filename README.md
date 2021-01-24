@@ -54,9 +54,9 @@
 * Email: zveilsidez@gmail.com
 * Github: [@raykang21](https://github.com/raykang21)
 
-👤 
-* Email: 
-* Github: 
+👤 **Chaewon Park**
+* Email: ysy05152@gmail.com
+* Github: [@ysy05152](https://github.com/ysy05152)
 
 ## Communication
 * Discord Server: https://discord.gg/MXReAVdy
