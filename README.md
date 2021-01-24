@@ -9,12 +9,18 @@
 2. Create a branch with your name/nickname.
 3. See the structure of the current code. (If you have a question, please let me know, I will add Javadocs ASAP)
 
+## Week 2 (1/30/2021 - 2/6/2021) To-Do List
+1. Learn how to use JUnit Test.
+2. Check/Test initial code into TestMain/main().
+3. Learn how to use JavaFX (basic).
+
 ## Technologies
 * JDK 11 or above
 * JavaFX
 * JDBC
 * MySQL
 * JUnit
+* Tree (MinMaxTree)
 
 ## Structure
 ```
@@ -24,12 +30,12 @@
 └───main
     └───src
             BishopMovement.java
-            Board.java
+            Board.java (JavaDocs is updated 1/24/2021)
             InitialSetting.java
             KingMovement.java
             KnightMovement.java
             PawnMovement.java
-            Piece.java
+            Piece.java (JavaDocs is updated 1/24/2021)
             PieceMovement.java
             QueenMovement.java
             RookMovement.java
