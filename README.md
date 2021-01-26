@@ -16,7 +16,7 @@
 
 ## Technologies
 * JDK 11 or above
-* JavaFX
+* JavaFX 11.0.2 (https://gluonhq.com/products/javafx/)
 * JDBC
 * MySQL
 * JUnit
@@ -44,20 +44,6 @@
             testMain.java
 ```
 
-## Update Note
-* Board.java (JavaDocs is updated 1/24/2021)
-* Piece.java (JavaDocs is updated 1/24/2021)
-* PieceMovement.java (JavaDocs is updated 1/25/2021)
-* PawnMovement.java (JavaDocs is updated 1/25/2021)
-* BishopMovement.java (JavaDocs is updated 1/25/2021)
-* KingMovement.java (JavaDocs is updated 1/25/2021)
-* KnightMovement.java (JavaDocs is updated 1/25/2021)
-* QueenMovement.java (JavaDocs is updated 1/25/2021)
-* RookMovement.java (JavaDocs is updated 1/25/2021)
-* MovementMaker.java (just added 1/25/2021)
-* testMain.java (update some features 1/26/2021)
-* ScoreCalculator.java (update 1/26/2021)
-
 ## Team
 👤 **Jeonghoon Lee**
 * Email: jeonghoongatech@gmail.com
@@ -84,3 +70,29 @@
 
 ## Meeting time
 * Every Saturday at 10 PM (ET)
+
+# Update Note (1/26)
+* MovementMaker File just added.
+* ScoreCalculator now available
+* testMain updated. (now you can calculate score and see the map)
+```
+Modified files
+* MovementMaker.java
+* testMain.java
+* ScoreCalculator.java
+```
+
+# Update Note (1/25)
+JavaDoc is updated
+```
+Modified files
+* Board.java
+* Piece.java
+* PieceMovement.java
+* PawnMovement.java
+* BishopMovement.java
+* KingMovement.java
+* KnightMovement.java
+* QueenMovement.java
+* RookMovement.java
+```
