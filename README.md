@@ -71,7 +71,7 @@
 ## Meeting time
 * Every Saturday at 10 PM (ET)
 
-# Update Note (1/26)
+## Update Note (1/26)
 * MovementMaker File just added.
 * ScoreCalculator now available
 * testMain updated. (now you can calculate score and see the map)
@@ -82,8 +82,8 @@ Modified files
 * ScoreCalculator.java
 ```
 
-# Update Note (1/25)
-JavaDoc is updated
+## Update Note (1/25)
+* JavaDoc is updated
 ```
 Modified files
 * Board.java
