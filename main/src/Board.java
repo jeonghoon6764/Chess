@@ -1,5 +1,9 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * This is class that represents Board.
+ * 
  * @version 1.0
  */
 public class Board {
@@ -7,6 +11,7 @@ public class Board {
     private Piece [][] board;
     private int i;
     private int j;
+    private Map<Integer, Double> scoreMap;
 
     /**
      * A constructor that take size i (row), size j (col)
@@ -17,6 +22,7 @@ public class Board {
         this.i = i;
         this.j = j;
         board = new Piece[i][j];
+        scoreMap = new HashMap<>();
     }
     
     /**
@@ -33,6 +39,8 @@ public class Board {
             System.out.println("idx setting is wrong. try again.");
         }
         board[iIdx][jIdx] = new Piece(pieceName, teamNumber, pawnDirection);
+        ScoreCalculator sc = new ScoreCalculator(this);
+        scoreMap = sc.getScoreMap();
     }
 
     /**
@@ -55,10 +63,27 @@ public class Board {
 
     /**
      * getter for col size.
-     * @return
+     * @return col size.
      */
     public int getJSize() {
         return j;
+    }
+
+    /**
+     * getter for scoreMap.
+     * @return scoreMap.
+     */
+    public Map<Integer, Double> getScoreMap() {
+        return scoreMap;
+    }
+
+    /**
+     * getter for score.
+     * @param teamNumber teamNumber.
+     * @return score of team.
+     */
+    public double getTeamScore(int teamNumber) {
+        return scoreMap.get(teamNumber);
     }
 
     /**

@@ -40,7 +40,7 @@
             PieceMovement.java *
             QueenMovement.java *
             RookMovement.java *
-            scoreCalculator.java
+            ScoreCalculator.java
             testMain.java
 ```
 
@@ -54,8 +54,9 @@
 * KnightMovement.java (JavaDocs is updated 1/25/2021)
 * QueenMovement.java (JavaDocs is updated 1/25/2021)
 * RookMovement.java (JavaDocs is updated 1/25/2021)
-* MovementMaker.java (just added)
-* testMain.java
+* MovementMaker.java (just added 1/25/2021)
+* testMain.java (update some features 1/26/2021)
+* ScoreCalculator.java (update 1/26/2021)
 
 ## Team
 👤 **Jeonghoon Lee**

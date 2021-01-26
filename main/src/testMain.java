@@ -1,13 +1,29 @@
 import java.util.List;
 
+/**
+ * This is class is only for test/practist purpose.
+ * will remove this after GUI tool or JUnit Test is setted.
+ * 
+ * @version 1.0
+ */
 public class testMain {
 
+    /**
+     * Main method.
+     * you can modify/add any code in here to test/practice code.
+     * @param args parameter that from command.
+     */
     public static void main(String[] args) {
+        
+        Board board = initialSetting(); // initial board set. see the method below.
 
-        Board board = initialSetting();
+        //printBoard(board); //printboard method. this will print current board status.
+        printBoardWithPath(board, 4, 4); // printboard method. this will print current board with path.
 
-        //printBoard(board);
-        printBoardWithPath(board, 4, 4);
+        System.out.println("********** Current Score **********");
+        System.out.println("Team 0 : " + board.getTeamScore(0));
+        System.out.println("Team 1 : " + board.getTeamScore(1));
+        //example of score usage.
     }
 
 
@@ -88,7 +104,7 @@ public class testMain {
         board.setPiece(0, 6, "knight", 0, "");;
         board.setPiece(0, 7, "rook", 0, "");
 
-        board.setPiece(4, 4, "rook", 0, ""); //test purpose
+        board.setPiece(4, 4, "queen", 0, ""); //test purpose
 
         for (int i = 0; i < 8; i++) {
             board.setPiece(1, i, "pawn", 0, "down");
