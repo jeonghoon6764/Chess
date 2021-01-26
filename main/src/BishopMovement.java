@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Bishop Movement Class. This class contains the information that the bishop needs to move.

@@ -7,14 +7,8 @@ public class testMain {
         Board board = initialSetting();
         printBoard(board);
 
-        RookMovement rm = new RookMovement(4, 4, board);
-        ArrayList<PieceMovement> list = rm.getMovementList();
-
-        System.out.println("list Size = " + list.size());
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println("toI val : " + list.get(i).getToI());
-            System.out.println("toJ val : " + list.get(i).getToJ() + "\n");
-        }
+        //RookMovement rm = new RookMovement(4, 4, board);
+       // ArrayList<PieceMovement> list = rm.getMovementList();
 
 
     }

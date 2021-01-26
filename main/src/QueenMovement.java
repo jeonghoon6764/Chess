@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.List;
 /**
  * Queen Movement Class. This class contains the information that the queen needs to move.
  * @version 1.0

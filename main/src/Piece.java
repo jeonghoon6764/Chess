@@ -48,7 +48,7 @@ public class Piece {
      * @param pawnDirection direction of pawn (see above)
      */
     public Piece(String pieceName, int teamNumber, String pawnDirection) {
-        this(pieceName, 0, "", teamNumber, pawnDirection);
+        this(pieceName, 0, teamNumber, pawnDirection);
         if (pieceName.equalsIgnoreCase("pawn")) {
             movementCode = "P";
         } else if (pieceName.equalsIgnoreCase("rook")) {
@@ -76,27 +76,27 @@ public class Piece {
         if (pieceName.equalsIgnoreCase("rook")) {
             queeningPiece = new Piece(
                     pieceName + " (" + this.pieceName + ")"
-                    , this.numOfMove, "R", this.teamNumber
+                    , this.numOfMove, this.teamNumber
                     , "");
         } else if (pieceName.equalsIgnoreCase("knight")) {
             queeningPiece = new Piece(
                     pieceName + " (" + this.pieceName + ")"
-                    , this.numOfMove, "Q", this.teamNumber
+                    , this.numOfMove, this.teamNumber
                     , "");
         } else if (pieceName.equalsIgnoreCase("bishop")) {
             queeningPiece = new Piece(
                     pieceName + " (" + this.pieceName + ")"
-                    , this.numOfMove, "B", this.teamNumber
+                    , this.numOfMove, this.teamNumber
                     , "");
         } else if (pieceName.equalsIgnoreCase("queen")) {
             queeningPiece = new Piece(
                     pieceName + " (" + this.pieceName + ")"
-                    , this.numOfMove, "Q", this.teamNumber
+                    , this.numOfMove, this.teamNumber
                     , "");
         } else if (pieceName.equalsIgnoreCase("King")) {
             queeningPiece = new Piece(
                     pieceName + " (" + this.pieceName + ")"
-                    , this.numOfMove, "K", this.teamNumber
+                    , this.numOfMove, this.teamNumber
                     , "");
         } else {
             System.out.println("Something wrong in make piece.");

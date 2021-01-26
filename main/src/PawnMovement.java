@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.List;
 /**
  * Pawn Movement Class. This class contains the information that the pawn needs to move.
  * @version 1.0
@@ -13,11 +13,13 @@ public class PawnMovement {
 
     /**
      * Constructor for PawnMovement class.
-     * @param i board index i which is pawn located.
-     * @param j board index j which is pawn located.
+     * 
+     * @param i     board index i which is pawn located.
+     * @param j     board index j which is pawn located.
      * @param board board
+     * @throws Exception Exceptrion
      */
-    public PawnMovement(int i, int j, Board board) {
+    public PawnMovement(int i, int j, Board board) throws Exception {
 
         movementList = new ArrayList<>();
         this.boardISize = board.getISize();

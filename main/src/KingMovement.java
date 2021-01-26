@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.List;
 /**
  * King Movement Class. This class contains the information that the king needs to move.
  * @version 1.0
