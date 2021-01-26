@@ -1,12 +1,22 @@
 import java.util.ArrayList;
 
+/**
+ * Pawn Movement Class. This class contains the information that the pawn needs to move.
+ * @version 1.0
+ */
 public class PawnMovement {
 
-    private ArrayList<PieceMovement> movementList;
+    private List<PieceMovement> movementList;
     private int boardISize;
     private int boardJSize;
     private Piece piece;
 
+    /**
+     * Constructor for PawnMovement class.
+     * @param i board index i which is pawn located.
+     * @param j board index j which is pawn located.
+     * @param board board
+     */
     public PawnMovement(int i, int j, Board board) {
 
         movementList = new ArrayList<>();
@@ -24,7 +34,7 @@ public class PawnMovement {
         } else if (piece.getPawnDirection().equalsIgnoreCase("left")) {
             pawnDirectionLeft(i, j, board);
         } else {
-            System.out.println("pawnMovement method is wrong.");
+            throw new Exception("pawnMovement method is wrong.");
         }
 
         int listSize = movementList.size();
@@ -52,6 +62,12 @@ public class PawnMovement {
     }
 
 
+    /**
+     * This is the setter method for pawn movement, which is going down.
+     * @param i i index of board, pawn currently located.
+     * @param j j index of board, pawn currently located.
+     * @param board board object.
+     */
     private void pawnDirectionDown(int i, int j, Board board) {
         if (piece.getNumOfMove() == 0) {
             if (i + 1 < boardISize && i + 1 >= 0
@@ -101,7 +117,12 @@ public class PawnMovement {
         }
     }
 
-
+    /**
+     * This is the setter method for pawn movement, which is going up.
+     * @param i i index of board, pawn currently located.
+     * @param j j index of board, pawn currently located.
+     * @param board board object.
+     */
     private void pawnDirectionUp(int i, int j, Board board) {
         if (piece.getNumOfMove() == 0) {
             if (i - 1 < boardISize && i - 1 >= 0
@@ -151,6 +172,12 @@ public class PawnMovement {
         }
     }
 
+    /**
+     * This is the setter method for pawn movement, which is going right.
+     * @param i i index of board, pawn currently located.
+     * @param j j index of board, pawn currently located.
+     * @param board board object.
+     */
     private void pawnDirectionRight(int i, int j, Board board) {
         if (piece.getNumOfMove() == 0) {
             if (i < boardISize && i >= 0
@@ -201,6 +228,12 @@ public class PawnMovement {
     }
 
 
+    /**
+     * This is the setter method for pawn movement, which is going left.
+     * @param i i index of board, pawn currently located.
+     * @param j j index of board, pawn currently located.
+     * @param board board object.
+     */
     private void pawnDirectionLeft(int i, int j, Board board) {
         if (piece.getNumOfMove() == 0) {
             if (i < boardISize && i >= 0
@@ -250,7 +283,11 @@ public class PawnMovement {
         }
     }
 
-    public ArrayList<PieceMovement> getMovementList() {
+    /**
+     * getter method for movementList
+     * @return list of movement.
+     */
+    public List<PieceMovement> getMovementList() {
         return movementList;
     }
 }

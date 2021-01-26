@@ -1,12 +1,22 @@
 import java.util.ArrayList;
 
+/**
+ * Knight Movement Class. This class contains the information that the knight needs to move.
+ * @version 1.0
+ */
 public class KnightMovement {
 
-    private ArrayList<PieceMovement> movementList;
+    private List<PieceMovement> movementList;
     private int boardISize;
     private int boardJSize;
     private Piece piece;
 
+    /**
+     * Constructor for KnightMovement class.
+     * @param i board index i which is knight located.
+     * @param j board index j which is knight located.
+     * @param board board
+     */
     public KnightMovement(int i, int j, Board board) {
 
         movementList = new ArrayList<>();
@@ -25,6 +35,16 @@ public class KnightMovement {
 
     }
 
+    /**
+     * This is helper method for making movements.
+     * Returns a movement list that increases or decreases the toI, toJ variables by iIncrease
+     * , jIncrease parameter size.
+     * @param i i index of board, knight currently located.
+     * @param j j index of board, knight currently located.
+     * @param iIncrease i index increment.
+     * @param jIncrease j index increment.
+     * @param board board object.
+     */
     public void makeMovement(int i, int j, int iIncrease, int jIncrease, Board board) {
         int origI = i;
         int origJ = j;
@@ -40,8 +60,11 @@ public class KnightMovement {
     }
 
 
-
-    public ArrayList<PieceMovement> getMovementList() {
+    /**
+     * getter for movementList
+     * @return movementList.
+     */
+    public List<PieceMovement> getMovementList() {
         return movementList;
     }
 }

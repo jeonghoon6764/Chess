@@ -29,19 +29,30 @@
 │
 └───main
     └───src
-            BishopMovement.java
-            Board.java (JavaDocs is updated 1/24/2021)
+            BishopMovement.java *
+            Board.java *
             InitialSetting.java
-            KingMovement.java
-            KnightMovement.java
-            PawnMovement.java
-            Piece.java (JavaDocs is updated 1/24/2021)
-            PieceMovement.java
-            QueenMovement.java
-            RookMovement.java
+            KingMovement.java *
+            KnightMovement.java *
+            PawnMovement.java *
+            Piece.java *
+            PieceMovement.java *
+            QueenMovement.java *
+            RookMovement.java *
             scoreCalculator.java
             testMain.java
 ```
+
+## Update Note
+* Board.java (JavaDocs is updated 1/24/2021)
+* Piece.java (JavaDocs is updated 1/24/2021)
+* PieceMovement.java (JavaDocs is updated 1/25/2021)
+* PawnMovement.java (JavaDocs is updated 1/25/2021)
+* BishopMovement.java (JavaDocs is updated 1/25/2021)
+* KingMovement.java (JavaDocs is updated 1/25/2021)
+* KnightMovement.java (JavaDocs is updated 1/25/2021)
+* QueenMovement.java (JavaDocs is updated 1/25/2021)
+* RookMovement.java (JavaDocs is updated 1/25/2021)
 
 ## Team
 👤 **Jeonghoon Lee**
