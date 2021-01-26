@@ -34,6 +34,7 @@
             InitialSetting.java
             KingMovement.java *
             KnightMovement.java *
+            MovementMaker.java
             PawnMovement.java *
             Piece.java *
             PieceMovement.java *
@@ -53,6 +54,8 @@
 * KnightMovement.java (JavaDocs is updated 1/25/2021)
 * QueenMovement.java (JavaDocs is updated 1/25/2021)
 * RookMovement.java (JavaDocs is updated 1/25/2021)
+* MovementMaker.java (just added)
+* testMain.java
 
 ## Team
 👤 **Jeonghoon Lee**

@@ -17,9 +17,8 @@ public class PawnMovement {
      * @param i     board index i which is pawn located.
      * @param j     board index j which is pawn located.
      * @param board board
-     * @throws Exception Exceptrion
      */
-    public PawnMovement(int i, int j, Board board) throws Exception {
+    public PawnMovement(int i, int j, Board board){
 
         movementList = new ArrayList<>();
         this.boardISize = board.getISize();
@@ -36,7 +35,7 @@ public class PawnMovement {
         } else if (piece.getPawnDirection().equalsIgnoreCase("left")) {
             pawnDirectionLeft(i, j, board);
         } else {
-            throw new Exception("pawnMovement method is wrong.");
+            //throw new Exception("pawnMovement method is wrong.");
         }
 
         int listSize = movementList.size();

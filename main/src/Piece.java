@@ -6,7 +6,7 @@ public class Piece {
 
     private String pieceName;
     private int numOfMove; //number of movement. (for special rules, such as En Passant, Castling)
-    private String movementCode; //represent movement. (P = Pawn, R = Rook, K = Knight, B = bishop, Q = Queen, K = King)
+    private String movementCode; //represent movement. (P = Pawn, R = Rook, N = Knight, B = bishop, Q = Queen, K = King)
     private int teamNumber; //represent teamNumber (for 1vs1vs1vs1)
     private boolean upPawn; //direction of pawn (only for pawn object, else -> false all)
     private boolean downPawn;
