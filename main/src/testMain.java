@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class testMain {
 
@@ -7,13 +8,25 @@ public class testMain {
         Board board = initialSetting();
         printBoard(board);
 
-        //RookMovement rm = new RookMovement(4, 4, board);
-       // ArrayList<PieceMovement> list = rm.getMovementList();
+        RookMovement rm = new RookMovement(4, 4, board);
+        List<PieceMovement> list = rm.getMovementList();
+
+        System.out.println("index [4][4] rook can go to ... \n");
+
+        for (int i = 0; i < list.size(); i++) {
+            int testi = list.get(i).getToI();
+            int testj = list.get(i).getToJ();
+
+            System.out.println("i value : " + testi + " j value : " + testj +"\n");
+        }
 
 
     }
 
-
+    /**
+     * PrintBoard method.
+     * @param board board that want to print.
+     */
     private static void printBoard(Board board) {
         for (int i = 0; i < 8; i++) {
             System.out.println("+---+---+---+---+---+---+---+---+");
@@ -30,6 +43,10 @@ public class testMain {
         System.out.println("+---+---+---+---+---+---+---+---+");
     }
 
+    /**
+     * initial setting
+     * @return initial board
+     */
     private static Board initialSetting() {
         Board board = new Board(8, 8);
 
@@ -42,7 +59,7 @@ public class testMain {
         board.setPiece(0, 6, "knight", 0, "down");
         board.setPiece(0, 7, "rook", 0, "down");
 
-        board.setPiece(4, 4, "rook", 0, "down");
+        board.setPiece(4, 4, "rook", 0, "down"); //test purpose
 
         for (int i = 0; i < 8; i++) {
             board.setPiece(1, i, "pawn", 0, "down");
