@@ -43,8 +43,8 @@ public class testMain {
 
         boolean[][] isPath = new boolean [board.getISize()][board.getJSize()];
 
-        for (int n = 0; n < movementList.size(); n++) {
-            isPath[movementList.get(n).getToI()][movementList.get(n).getToJ()] = true;
+        for (PieceMovement pieceMovement : movementList) {
+            isPath[pieceMovement.getToI()][pieceMovement.getToJ()] = true;
         }
         
 
