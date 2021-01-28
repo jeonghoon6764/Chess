@@ -26,7 +26,6 @@ public class testMain {
         //example of score usage.
     }
 
-
     /**
      * PrintBoard method.
      * This will show you where the piece that located at [row][col] can go.
