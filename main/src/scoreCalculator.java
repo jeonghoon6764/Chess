@@ -7,6 +7,7 @@ import java.util.Map;
  */
 
 public class ScoreCalculator {
+    
 
     private Map<Integer, Double> scoreMap;
 
