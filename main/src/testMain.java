@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * This is class is only for test/practist purpose.
@@ -17,13 +18,51 @@ public class testMain {
         
         Board board = initialSetting(); // initial board set. see the method below.
 
+        board.setPiece(4, 2, "Rook", 0, "");
         //printBoard(board); //printboard method. this will print current board status.
-        printBoardWithPath(board, 4, 4); // printboard method. this will print current board with path.
+        printBoardWithPath(board, 4, 2); // printboard method. this will print current board with path.
 
         System.out.println("********** Current Score **********");
         System.out.println("Team 0 : " + board.getTeamScore(0));
         System.out.println("Team 1 : " + board.getTeamScore(1));
         //example of score usage.
+
+
+
+
+
+
+
+
+
+        Scanner sc = new Scanner(System.in);
+
+        int i = 0;
+        String input = "";
+        for (;;) {
+            System.out.println("Fight 1 vs 1");
+            if (i % 2 == 0) {
+                System.out.println("\n\nwhich piece do you want to move?");
+                input = sc.nextLine();
+                System.out.println("\n\nto where?");
+                input = sc.nextLine();
+
+                printBoard(board);
+
+            } else {
+                System.out.println("\n\nwhich piece do you want to move?");
+                input = sc.nextLine();
+                System.out.println("\n\nto where?");
+                input = sc.nextLine();
+
+                printBoard(board);
+                if (i == 19) {
+                    break;
+                }
+            }
+
+
+        }
     }
 
     /**
@@ -103,7 +142,7 @@ public class testMain {
         board.setPiece(0, 6, "knight", 0, "");;
         board.setPiece(0, 7, "rook", 0, "");
 
-        board.setPiece(4, 4, "queen", 0, ""); //test purpose
+        //board.setPiece(4, 4, "queen", 0, ""); //test purpose
 
         for (int i = 0; i < 8; i++) {
             board.setPiece(1, i, "pawn", 0, "down");
