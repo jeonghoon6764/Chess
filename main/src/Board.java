@@ -44,6 +44,16 @@ public class Board {
     }
 
     /**
+     * setter for piece
+     * @param iIdx index of i
+     * @param jIdx index of j
+     * @param piece piece
+     */
+    public void setPiece(int iIdx, int jIdx, Piece piece) {
+        board[iIdx][jIdx] = piece;
+    }
+
+    /**
      * getter for piece.
      * @param i row index.
      * @param j col index.
@@ -95,30 +105,22 @@ public class Board {
         int origJ = pieceMovement.getFromJ();
 
         Board newBoard = new Board(8, 8);
+        Piece piece = pieceMovement.getPiece();
 
         /*
         * Deep copying from current board to a new board. 
         */
-        for(int count1 = 0; count1 < 8; count1++){
-            for(int count2 = 0; count2 < 8; count2++){
-                newBoard.setPiece(count1, count2, board[count1][count2].getPieceName().toLowerCase(), board[count1][count2].getTeamNumber(), "");
-                if (newBoard.getPiece(count1, count2).getPieceName().toLowerCase().equals("pawn")){
-                    if (newBoard.getPiece(count1, count2).getTeamNumber() == 0){                  
-                        newBoard.setPiece(count1, count2, board[count1][count2].getPieceName().toLowerCase(), board[count1][count2].getTeamNumber(), "down");
-                    } else{
-                        newBoard.setPiece(count1, count2, board[count1][count2].getPieceName().toLowerCase(), board[count1][count2].getTeamNumber(), "up");
-                    }
-                }
+        for(int count1 = 0; count1 < i; count1++){
+            for(int count2 = 0; count2 < j; count2++){
+                newBoard.setPiece(count1, count2, piece);
             }
         }
 
-        int i = pieceMovement.getToI();
-        int j = pieceMovement.getToJ();
-
-        Piece piece = pieceMovement.getPiece();
+        int toI = pieceMovement.getToI();
+        int toJ = pieceMovement.getToJ();
 
         board[origI][origJ] = null; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
-        board[i][j] = piece; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
-        newBoard.board[i][j] = piece; //Apply a new movement to a new board.
+        board[toI][toJ] = piece; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
+        newBoard.board[toI][toJ] = piece; //Apply a new movement to a new board.
     }
 }
