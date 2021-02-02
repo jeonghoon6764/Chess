@@ -102,7 +102,7 @@ public class Board {
      * This method takes a pieceMovement object and applies the contents of that object to the Board.
      * @param pieceMovement the movement of piece (object)
      */
-    public void applyMovement(PieceMovement pieceMovement) {
+    public Board applyMovement(PieceMovement pieceMovement) {
         int origI = pieceMovement.getFromI();
         int origJ = pieceMovement.getFromJ();
         int toI = pieceMovement.getToI();
@@ -117,15 +117,21 @@ public class Board {
         for(int count1 = 0; count1 < i; count1++){
             for(int count2 = 0; count2 < j; count2++){
 
-                newBoard.setPiece(count1, count2, board[count1][count2]);
+                if (count1 == toI && count2 == toJ) {
+                    newBoard.setPiece(count1, count2, piece);
+                } else if (!(count1 == origI && count2 == origJ)) {
+                    newBoard.setPiece(count1, count2, board[count1][count2]);
+                }
 
             }
         }
+        
+        return newBoard;
 
 
 
-        board[origI][origJ] = null; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
-        board[toI][toJ] = piece; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
-        newBoard.board[toI][toJ] = piece; //Apply a new movement to a new board.
+        //board[origI][origJ] = null; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
+        //board[toI][toJ] = piece; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
+        //newBoard.board[toI][toJ] = piece; //Apply a new movement to a new board.
     }
 }
