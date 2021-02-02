@@ -51,6 +51,8 @@ public class Board {
      */
     public void setPiece(int iIdx, int jIdx, Piece piece) {
         board[iIdx][jIdx] = piece;
+        ScoreCalculator sc = new ScoreCalculator(this);
+        scoreMap = sc.getScoreMap();
     }
 
     /**
@@ -103,8 +105,10 @@ public class Board {
     public void applyMovement(PieceMovement pieceMovement) {
         int origI = pieceMovement.getFromI();
         int origJ = pieceMovement.getFromJ();
+        int toI = pieceMovement.getToI();
+        int toJ = pieceMovement.getToJ();
 
-        Board newBoard = new Board(8, 8);
+        Board newBoard = new Board(i, j);
         Piece piece = pieceMovement.getPiece();
 
         /*
@@ -112,12 +116,13 @@ public class Board {
         */
         for(int count1 = 0; count1 < i; count1++){
             for(int count2 = 0; count2 < j; count2++){
-                newBoard.setPiece(count1, count2, piece);
+
+                newBoard.setPiece(count1, count2, board[count1][count2]);
+
             }
         }
 
-        int toI = pieceMovement.getToI();
-        int toJ = pieceMovement.getToJ();
+
 
         board[origI][origJ] = null; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
         board[toI][toJ] = piece; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
