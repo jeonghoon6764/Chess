@@ -94,12 +94,31 @@ public class Board {
         int origI = pieceMovement.getFromI();
         int origJ = pieceMovement.getFromJ();
 
+        Board newBoard = new Board(8, 8);
+
+        /*
+        * Deep copying from current board to a new board. 
+        */
+        for(int count1 = 0; count1 < 8; count1++){
+            for(int count2 = 0; count2 < 8; count2++){
+                newBoard.setPiece(count1, count2, board[count1][count2].getPieceName().toLowerCase(), board[count1][count2].getTeamNumber(), "");
+                if (newBoard.getPiece(count1, count2).getPieceName().toLowerCase().equals("pawn")){
+                    if (newBoard.getPiece(count1, count2).getTeamNumber() == 0){                  
+                        newBoard.setPiece(count1, count2, board[count1][count2].getPieceName().toLowerCase(), board[count1][count2].getTeamNumber(), "down");
+                    } else{
+                        newBoard.setPiece(count1, count2, board[count1][count2].getPieceName().toLowerCase(), board[count1][count2].getTeamNumber(), "up");
+                    }
+                }
+            }
+        }
+
         int i = pieceMovement.getToI();
         int j = pieceMovement.getToJ();
 
         Piece piece = pieceMovement.getPiece();
 
-        board[origI][origJ] = null;
-        board[i][j] = piece;
+        board[origI][origJ] = null; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
+        board[i][j] = piece; //This code should be deleted later //It changes current board. Our current goal is to make a new board everytime we move a piece.
+        newBoard.board[i][j] = piece; //Apply a new movement to a new board.
     }
 }
