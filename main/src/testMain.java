@@ -30,7 +30,9 @@ public class testMain {
 
 
 
-
+        System.out.println(board.getPiece(4, 2).getPieceName());
+        System.out.println(board.getPiece(0, 0).getPieceName()); //piece name 호출법
+        System.out.println(board.getPiece(4, 2).getTeamNumber());
 
 
 
